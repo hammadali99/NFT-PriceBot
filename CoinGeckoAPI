@@ -1,0 +1,24 @@
+from pycoingecko import CoinGeckoAPI
+import re
+import telebot
+
+
+cg = CoinGeckoAPI()
+
+bot = telebot.TeleBot('1906897991:AAGC9ZcB0k3R9aXSgdOgAcy2gIg0bu7_Q4Q', parse_mode=None) 
+
+KodaRaw = cg.get_price(ids='koda-finance', vs_currencies='usd')
+
+
+price = re.findall(r'(?<=: )+([0-9].[0-9]*)', str(KodaRaw))
+
+finalprice = '$' + price[0]
+
+print(finalprice)
+
+
+@bot.message_handler(regexp='check koda cg')
+def KODA(message):
+  bot.reply_to(message, finalprice)
+
+bot.polling(none_stop=True)
