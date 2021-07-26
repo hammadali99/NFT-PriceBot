@@ -1,0 +1,45 @@
+import coinmarketcapapi
+import telebot
+import re
+
+bot = telebot.TeleBot('1906897991:AAGC9ZcB0k3R9aXSgdOgAcy2gIg0bu7_Q4Q', parse_mode=None)
+API_KEY = "ebac3640-78d7-4b82-8e9c-3df95e4d4aa5"
+cmc = coinmarketcapapi.CoinMarketCapAPI(API_KEY)
+
+data_id_map = cmc.cryptocurrency_map()
+data = cmc.cryptocurrency_info(symbol='KODA')
+data_quote = cmc.cryptocurrency_quotes_latest(symbol='KODA')
+
+pprice = re.findall(r'[\:] ', str(data_quote))
+
+print(pprice)
+
+
+
+@bot.message_handler(regexp='check koda from cmc')
+def KODA(message):
+  bot.reply_to(message, pprice)
+
+bot.polling(none_stop=True)import coinmarketcapapi
+import telebot
+import re
+
+bot = telebot.TeleBot('1906897991:AAGC9ZcB0k3R9aXSgdOgAcy2gIg0bu7_Q4Q', parse_mode=None)
+API_KEY = "ebac3640-78d7-4b82-8e9c-3df95e4d4aa5"
+cmc = coinmarketcapapi.CoinMarketCapAPI(API_KEY)
+
+data_id_map = cmc.cryptocurrency_map()
+data = cmc.cryptocurrency_info(symbol='KODA')
+data_quote = cmc.cryptocurrency_quotes_latest(symbol='KODA')
+
+pprice = re.findall(r'[\:] ', str(data_quote))
+
+print(pprice)
+
+
+
+@bot.message_handler(regexp='check koda from cmc')
+def KODA(message):
+  bot.reply_to(message, pprice)
+
+bot.polling(none_stop=True)
