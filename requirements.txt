@@ -1,0 +1,3 @@
+python-telegram-bot
+telegram-send==0.25
+pyTelegramBotAPI==3.8.1
