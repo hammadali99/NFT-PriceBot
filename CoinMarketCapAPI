@@ -2,7 +2,7 @@ import coinmarketcapapi
 import telebot
 import re
 
-bot = telebot.TeleBot('1906897991:AAGC9ZcB0k3R9aXSgdOgAcy2gIg0bu7_Q4Q', parse_mode=None)
+bot = telebot.TeleBot('APIKEY', parse_mode=None)
 API_KEY = "ebac3640-78d7-4b82-8e9c-3df95e4d4aa5"
 cmc = coinmarketcapapi.CoinMarketCapAPI(API_KEY)
 
