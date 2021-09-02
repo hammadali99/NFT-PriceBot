@@ -14,11 +14,11 @@ Following are the language and packages used for this project:
 
 Following commands are for installing the packages:
 
-`$pip install  python-coinmarketcap=0.2
+`$pip install  python-coinmarketcap=0.2`
 
-`$pip install  pycoingecko=2.2.0
+`$pip install  pycoingecko=2.2.0`
 
-`$pip install pyTelegramBotAPI=3.8.1
+`$pip install pyTelegramBotAPI=3.8.1`
 
 Documentation on how to use the APIs are below:
 
