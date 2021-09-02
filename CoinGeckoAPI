@@ -5,7 +5,7 @@ import telebot
 
 cg = CoinGeckoAPI()
 
-bot = telebot.TeleBot('1906897991:AAGC9ZcB0k3R9aXSgdOgAcy2gIg0bu7_Q4Q', parse_mode=None) 
+bot = telebot.TeleBot('APIKEY', parse_mode=None) 
 
 KodaRaw = cg.get_price(ids='koda-finance', vs_currencies='usd')
 
